@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+@import "partials/fonts";
+@import "partials/colors";
+@import "partials/header";
+@import "partials/layout";
+
+body {
+    font-family: $Sora;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: $marron-dark;
+}
+
+button {
+    font-family: $Sans;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}

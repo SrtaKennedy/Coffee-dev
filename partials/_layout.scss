@@ -1,0 +1,290 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.bg-home {
+    position: relative;
+}
+
+.bg-home::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #3C2100), url("../assets/bg.jpg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+.hero {
+    color: $white-light;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1 {
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 30px;
+    }
+
+    h4 {
+        margin-top: 15px;
+    }
+
+    p {
+        text-align: center;
+        margin: 14px 0;
+    }
+}
+
+.button-contact {
+    padding: 14px 28px;
+    color: $white-light;
+    background-color: $primary-dark;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+
+}
+
+.button-contact:hover {
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        h1 {
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1{
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+}
+
+.about {
+    background-color: $marron-dark;
+    overflow: hidden;
+    color: $white-light;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+
+    img {
+        max-width: 570px;
+        border-radius: 10px;
+        -webkit-box-shadow: 15px 3px 14px -9px rgba(0,0,0,0.42);
+        -moz-box-shadow: 15px 3px 14px -9px rgba(0,0,0,0.42);
+        box-shadow: 15px 3px 14px -9px rgba(0,0,0,0.42);
+    }
+}
+
+.about-content div {
+    flex: 1;
+}
+
+.about-descricao {
+    h2 {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+}
+
+.services {
+    background-color: $primary-normal;
+    color: $marron-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+}
+
+.services-content h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.services-content p {
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+}
+
+.coffees {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.coffee {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-light;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.5);
+
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-width: 354px;
+        transition: transform 0.25s; // isso serve para não ficar uma transição seca, está com o debaixo
+    }
+}
+
+.coffee img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.coffee-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: $white-light;
+    z-index: 99;
+}
+
+.coffee-info button {
+    color: $primary-normal;
+    background-color: $primary-dark;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: default;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 760px) {
+    .coffees {
+        flex-direction: column;
+    }
+
+    .coffee img {
+        max-width: 740px;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 24px;
+    color: $primary-normal;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 8px;
+    color: $primary-normal;
+}
+
+.btn-whatssap {
+    position: fixed;
+    bottom: 14px;
+    right: 20px;
+    z-index: 99;
+
+    img {
+        max-width: 74px;
+        transition: transform 0.25s;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatssap .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -140px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $primary-light;
+    color: $marron-dark;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-whatssap:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-whatssap {
+        img {
+            max-width: 64px;
+        }
+    }
+}
